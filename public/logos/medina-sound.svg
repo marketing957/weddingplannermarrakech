@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>medina-sound</title>
+  <rect width="64" height="64" fill="#5C1A1A"/><rect x="4" y="4" width="56" height="56" fill="none" stroke="#D4A574" stroke-width="1.5"/>
+  <g><ellipse cx="24" cy="42" rx="8" ry="6" fill="#F7F4EF"/>
+     <ellipse cx="42" cy="38" rx="8" ry="6" fill="#F7F4EF"/>
+     <path d="M32 42 V16 H50 V38" fill="none" stroke="#D4A574" stroke-width="3"/></g>
+</svg>

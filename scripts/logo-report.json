@@ -1,0 +1,417 @@
+{
+  "amanjena-wedding-cost": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://www.aman.com/themes/custom/aman/assets/src/media/aman.png",
+    "site": "https://www.aman.com/resorts/amanjena",
+    "light": false
+  },
+  "selman-marrakech-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://image-tc.galaxy.tf/wisvg-9ox6py6er5ytcq3eltwcc0uut/logoselmanblank.svg?width=500",
+    "site": "https://www.selman-marrakech.com/",
+    "light": true
+  },
+  "royal-mansour-wedding-cost": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://www.royalmansour.com/wp-content/uploads/2023/02/logo.png",
+    "site": "https://www.royalmansour.com/en/marrakech/",
+    "light": false
+  },
+  "la-mamounia-wedding-cost": {
+    "status": "updated",
+    "kind": "pinned",
+    "source": "https://mamounia.com/bundles/apiciuswebsite/images/logo.svg",
+    "site": "https://mamounia.com/en/",
+    "light": false
+  },
+  "palais-namaskar-wedding-cost": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://palaisnamaskar.com/wp-content/uploads/2026/04/PNM_logo.svg",
+    "site": "https://palaisnamaskar.com/",
+    "light": false
+  },
+  "four-seasons-marrakech-wedding-cost": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://www.fourseasons.com/etc/designs/fourseasons/img/logos/global/FS_Header_Logo.png",
+    "site": "https://www.fourseasons.com/marrakech/",
+    "light": false
+  },
+  "dar-ahlam-wedding-cost": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://www.darahlam.com/wp-content/uploads/2026/08/DA_logoRGB1200px.jpg",
+    "site": "https://www.darahlam.com/",
+    "light": false
+  },
+  "villa-des-orangers-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://www.villadesorangers.com/_img/logo-white.png",
+    "site": "https://www.villadesorangers.com/",
+    "light": true
+  },
+  "kasbah-tamadot-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://www.virginlimitededition.com/media/tzqj1z0j/logo.svg?quality=70",
+    "site": "https://www.virginlimitededition.com/kasbah-tamadot/",
+    "light": true
+  },
+  "fairmont-royal-palm-wedding-cost": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://www.fairmont.com/content/dam/brands/fai/hotels/africa/ma/marrakesh/b147/msa_l_L573-00.svg",
+    "site": "https://www.fairmont.com/en/hotels/marrakech/fairmont-royal-palm-marrakech.html",
+    "light": false
+  },
+  "villa-d-marrakech-wedding-cost": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://villadmarrakech.com/wp-content/uploads/2025/07/villa-d-logo-w.webp",
+    "site": "https://villadmarrakech.com/",
+    "light": true
+  },
+  "palais-ronsard-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://www.palaisronsard.com/_img/logo-desktop.svg",
+    "site": "https://www.palaisronsard.com/",
+    "light": false
+  },
+  "mandarin-oriental-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://media.ffycdn.net/eu/mandarin-oriental-hotel-group/t6T519YtkLq28Nm4ExKA.svg",
+    "site": "https://www.mandarinoriental.com/en/marrakech/la-medina",
+    "light": true
+  },
+  "oberoi-marrakech-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://www.oberoihotels.com/-/media/oberoi-hotel/weblogo_300724/marrakech.png",
+    "site": "https://www.oberoihotels.com/hotels-in-morocco-marrakech/",
+    "light": false
+  },
+  "jnane-rumi-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://cdn02.llos.xyz/media/image-c07b4c048e8b8de60b1bb5f5998a8508f582b433-164x43-svg.svg",
+    "site": "https://jnanerumi.com/",
+    "light": true
+  },
+  "les-deux-tours-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://les-deux-tours.com/img/les-deux-tours-logo-notxt.svg",
+    "site": "https://les-deux-tours.com/",
+    "light": false
+  },
+  "villa-dinari-wedding-cost": {
+    "status": "updated",
+    "kind": "pinned",
+    "source": "https://static.wixstatic.com/media/04e111_213324d9250242b5bea1b5f96abe4135~mv2.png",
+    "site": "https://www.villadinari.com/",
+    "light": true
+  },
+  "scarabeo-camp-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://images.squarespace-cdn.com/content/v1/5f997ef94da0c64db54c7a8f/1606126031006-2Q0O27XG4KGW3N3IKELQ/logo_SCARABEOCAMP_black.png?format=1500w",
+    "site": "https://www.scarabeocamp.com/",
+    "light": false
+  },
+  "inara-camp-wedding-cost": {
+    "status": "unreachable",
+    "site": null
+  },
+  "la-pause-wedding-cost": {
+    "status": "unreachable",
+    "site": null
+  },
+  "casa-lalla-takerkoust-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://www.casalalla.com/images/logo-header.png",
+    "site": "https://www.casalalla.com/",
+    "light": false
+  },
+  "ksar-char-bagh-wedding-cost": {
+    "status": "none",
+    "site": "https://www.academyprojects.org/"
+  },
+  "riad-el-fenn-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://el-fenn.b-cdn.net/wp-content/uploads/2025/06/El-Fenn-Rectangle-2.png.webp",
+    "site": "https://el-fenn.com/",
+    "light": false
+  },
+  "dar-zemora-wedding-cost": {
+    "status": "updated",
+    "kind": "pinned",
+    "source": "https://darzemora.com/wp-content/uploads/2023/09/DZ-logo.png",
+    "site": "https://darzemora.com/",
+    "light": false
+  },
+  "beldi-country-club-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://beldicountryclub.com/volumes/Beldi-Country-Club/hotel/_1400xAUTO_crop_center-center_none/1126/Hotel-1.webp",
+    "site": "https://beldicountryclub.com/",
+    "light": false
+  },
+  "riad-kniza-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://www.riadkniza.com/images/riad-kniza.png",
+    "site": "https://www.riadkniza.com/",
+    "light": true
+  },
+  "palais-paysan-wedding-cost": {
+    "status": "unreachable",
+    "site": null
+  },
+  "villa-laarissa-wedding-cost": {
+    "status": "unreachable",
+    "site": null
+  },
+  "riad-fes-marrakech-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://www.riad-yasmine.com/wp-content/uploads/2018/02/logo-typo-blanc.png",
+    "site": "https://www.riad-yasmine.com/",
+    "light": true
+  },
+  "domaine-des-remparts-wedding-cost": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://www.domaine-des-remparts.com/wp-content/uploads/2025/03/cropped-logo-5.webp",
+    "site": "https://www.domaine-des-remparts.com/",
+    "light": false
+  },
+  "kasbah-bab-ourika-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://www.kasbahbabourika.com/images/logo_KBO.svg",
+    "site": "https://www.kasbahbabourika.com/",
+    "light": false
+  },
+  "atlas-lens-studio": {
+    "status": "unreachable",
+    "site": null
+  },
+  "le-jardin-des-douars-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://jardindesdouars.com/_img/logo-color-light.svg",
+    "site": "https://jardindesdouars.com/",
+    "light": true
+  },
+  "ilaria-costa-photo": {
+    "status": "unreachable",
+    "site": null
+  },
+  "noor-frames": {
+    "status": "unrelated-site",
+    "site": "https://pookiehoodie.com/"
+  },
+  "marc-delorme": {
+    "status": "unrelated-site",
+    "site": "https://www.marcdelorme.com/"
+  },
+  "clara-vidal": {
+    "status": "unrelated-site",
+    "site": "https://claravidal.com/"
+  },
+  "yassine-photo": {
+    "status": "unreachable",
+    "site": null
+  },
+  "villa-taj-wedding-cost": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://villatajmarrakech.com/wp-content/uploads/2024/02/logo-villa-taj-marrakech.png",
+    "site": "https://villatajmarrakech.com/",
+    "light": false
+  },
+  "imane-studio": {
+    "status": "unreachable",
+    "site": null
+  },
+  "fleurs-du-souk": {
+    "status": "unreachable",
+    "site": null
+  },
+  "jardin-floral": {
+    "status": "unreachable",
+    "site": null
+  },
+  "palm-and-petal": {
+    "status": "unrelated-site",
+    "site": "https://palmandpetal.co/"
+  },
+  "rosa-medina": {
+    "status": "unreachable",
+    "site": null
+  },
+  "dj-karim-k": {
+    "status": "unreachable",
+    "site": null
+  },
+  "quartet-marrakech": {
+    "status": "unreachable",
+    "site": null
+  },
+  "dar-tajine-traiteur": {
+    "status": "unreachable",
+    "site": null
+  },
+  "medina-sound": {
+    "status": "unrelated-site",
+    "site": "https://medinasound.com/"
+  },
+  "chef-amine-prive": {
+    "status": "unreachable",
+    "site": null
+  },
+  "maison-saveurs": {
+    "status": "unreachable",
+    "site": null
+  },
+  "sucre-et-sel": {
+    "status": "unreachable",
+    "site": null
+  },
+  "patisserie-amandine": {
+    "status": "unreachable",
+    "site": null
+  },
+  "be-live-palmeraie-wedding-cost": {
+    "status": "updated",
+    "kind": "pinned",
+    "source": "https://belive-api.b-cdn.net/multimedia/images/logo_BeLive_negro.webp",
+    "site": "https://www.belivehotels.com/en/",
+    "light": false
+  },
+  "glam-by-lina": {
+    "status": "unreachable",
+    "site": null
+  },
+  "studio-nour-beauty": {
+    "status": "unreachable",
+    "site": null
+  },
+  "lumiere-events": {
+    "status": "unreachable",
+    "site": null
+  },
+  "desert-rig": {
+    "status": "unreachable",
+    "site": null
+  },
+  "feu-et-sable": {
+    "status": "unreachable",
+    "site": null
+  },
+  "oriental-dance-co": {
+    "status": "unreachable",
+    "site": null
+  },
+  "royal-mirage-deluxe-wedding-cost": {
+    "status": "unreachable",
+    "site": null
+  },
+  "maia-rose": {
+    "status": "unreachable",
+    "site": null
+  },
+  "amaria-events": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://amariaevents.com/favicon.svg",
+    "site": "https://amariaevents.com/",
+    "light": false
+  },
+  "studio-maev": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://www.studiomaev.com/wp-content/uploads/2025/02/Logo_MAEV-01.png",
+    "site": "https://www.studiomaev.com/",
+    "light": false
+  },
+  "philocaly-weddings": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://static.showit.co/200/7TIig6Y8SiOSCyX_iXgz3Q/shared/p-logo.png",
+    "site": "https://philocalyevents.com/",
+    "light": true
+  },
+  "amelie-wedding": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://amelie.wedding/images/landing/icon.png",
+    "site": "https://amelie.wedding/",
+    "light": false
+  },
+  "zinevent-marrakech": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://zineventmarrakech.com/wp-content/uploads/2024/11/cropped-WhatsApp_Image_2024-11-14_at_01.44.47_c569f17f-removebg-preview-1.png",
+    "site": "https://zineventmarrakech.com/",
+    "light": false
+  },
+  "the-souk-department": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://static.showit.co/400/haJGfLeYGfr3bwSzahkURw/286800/alternative_logo_5.png",
+    "site": "https://thesoukdepartment.com/",
+    "light": true
+  },
+  "exceptional-moment": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://exceptionalmoment.com/icons/exceptional-moment-logo-officiel-20260907-512.png",
+    "site": "https://exceptionalmoment.com/",
+    "light": false
+  },
+  "redkeys-marrakech": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://redkeys-marrakech.com/assets/redkeys-logo.svg",
+    "site": "https://redkeys-marrakech.com/",
+    "light": false
+  },
+  "la-perle-events": {
+    "status": "updated",
+    "kind": "header-img",
+    "source": "https://www.la-perle-events.com/_next/image?url=%2Flogo%2Flogo-brown.png&w=640&q=50",
+    "site": "https://www.la-perle-events.com/en",
+    "light": false
+  },
+  "ceremonia-event": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://ceremoniaevent.com/wp-content/uploads/2025/11/d476e54e7ad4c5f6a73b468b459fc1b97be12feaf5a079292677ce2c88fafa5d-1.png",
+    "site": "https://ceremoniaevent.com/",
+    "light": false
+  },
+  "boutique-souk": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://i0.wp.com/boutiquesouk.com/wp-content/uploads/2016/12/boutique-souk-logo-black-stars.png?fit=552%2C82&ssl=1",
+    "site": "https://boutiquesouk.com/",
+    "light": false
+  },
+  "instants-magiques": {
+    "status": "updated",
+    "kind": "json-ld",
+    "source": "https://instantsmagiques-marrakech.com/wp-content/uploads/2023/04/Logo-Instants-Magiques.png",
+    "site": "https://instantsmagiques-marrakech.com/",
+    "light": false
+  }
+}

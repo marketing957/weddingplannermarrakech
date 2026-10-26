@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>maia-rose</title>
+  <rect width="64" height="64" fill="#F7F4EF"/><rect x="4" y="4" width="56" height="56" fill="none" stroke="#B08948" stroke-width="1.5"/>
+  <g><circle cx="32" cy="30" r="10" fill="#B08948"/>
+     <circle cx="32" cy="30" r="5" fill="#F7F4EF"/>
+     <circle cx="32" cy="30" r="2" fill="#B08948"/>
+     <path d="M32 40 C28 46 24 50 32 52 C40 50 36 46 32 40 Z" fill="#161411" opacity=".8"/></g>
+</svg>

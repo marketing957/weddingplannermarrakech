@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>cake-atelier-mk</title>
+  <rect width="64" height="64" fill="#5C1A1A"/><rect x="4" y="4" width="56" height="56" fill="none" stroke="#D4A574" stroke-width="1.5"/>
+  <g><rect x="16" y="30" width="32" height="18" rx="2" fill="#F7F4EF"/>
+     <rect x="20" y="22" width="24" height="10" fill="#D4A574"/>
+     <rect x="30" y="14" width="4" height="8" fill="#F7F4EF"/>
+     <circle cx="32" cy="13" r="3" fill="#D4A574"/></g>
+</svg>

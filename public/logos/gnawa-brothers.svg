@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>gnawa-brothers</title>
+  <rect width="64" height="64" fill="#4A3728"/><circle cx="32" cy="32" r="28" fill="#4A3728" stroke="#E6C27A" stroke-width="2"/>
+  <g><ellipse cx="24" cy="42" rx="8" ry="6" fill="#F7F4EF"/>
+     <ellipse cx="42" cy="38" rx="8" ry="6" fill="#F7F4EF"/>
+     <path d="M32 42 V16 H50 V38" fill="none" stroke="#E6C27A" stroke-width="3"/></g>
+</svg>

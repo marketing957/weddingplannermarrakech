@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>chef-amine-privé</title>
+  <rect width="64" height="64" fill="#4A3728"/><circle cx="32" cy="32" r="28" fill="#4A3728" stroke="#E6C27A" stroke-width="2"/>
+  <g><path d="M32 50 C18 38 22 24 32 14 C42 24 46 38 32 50 Z" fill="#E6C27A"/>
+     <path d="M32 46 C24 38 28 28 32 22 C36 28 40 38 32 46 Z" fill="#F7F4EF" opacity=".45"/></g>
+</svg>

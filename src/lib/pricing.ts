@@ -253,13 +253,3 @@ function setEvents(
   return next;
 }
 
-export const eur = new Intl.NumberFormat("en-IE", {
-  style: "currency",
-  currency: "EUR",
-  maximumFractionDigits: 0,
-});
-
-export function eurShort(n: number) {
-  if (n >= 1000) return `€${Math.round(n / 1000)}k`;
-  return eur.format(n);
-}

@@ -1,4 +1,4 @@
--- Wedding Planner Marrakech clone: initial schema
+-- Wedding Planner Marrakesh clone: initial schema
 -- Content tables are publicly readable (anon + authenticated), writes are admin-only via service role.
 -- `leads` accepts anonymous inserts only (budget plan submissions).
 

@@ -74,8 +74,112 @@ export type Planner = {
   price_from: number | null;
   specialties: string[];
   website: string | null;
+  website_domain: string | null;
   instagram: string | null;
   featured: boolean;
+  review_strengths: string | null;
+  review_execution: string | null;
+  review_suits: string | null;
+  review_verdict: string | null;
+};
+
+export type VenueTier = "luxury" | "premium" | "standard";
+
+export type Venue = {
+  id: string;
+  slug: string;
+  name: string;
+  tier: VenueTier;
+  zone: string;
+  styles: string[];
+  style_slugs: string[];
+  capacity_seated: number;
+  capacity_max: number | null;
+  sleep_rooms: number | null;
+  sleep_guests: number | null;
+  min_nights: number;
+  price_night_low: number | null;
+  price_night_high: number | null;
+  catering_policy: string;
+  score_overall: number;
+  score_quality: number | null;
+  score_transparency: number | null;
+  score_value: number | null;
+  amenities: string[];
+  season_high: string | null;
+  season_shoulder: string | null;
+  season_low: string | null;
+  setting_text: string | null;
+  ceremony_text: string | null;
+  costs_text: string | null;
+  suits_text: string | null;
+  wpm_selection: boolean;
+  last_verified: string | null;
+};
+
+export type VenueStyle = { slug: string; name: string; description: string; sort_order: number };
+
+export type VendorCategory = {
+  slug: string;
+  name: string;
+  icon: string;
+  headline: string;
+  description: string;
+  most_booked: boolean;
+  sort_order: number;
+};
+
+export type Vendor = {
+  id: string;
+  slug: string;
+  name: string;
+  category_slug: string;
+  website: string | null;
+  instagram: string | null;
+  styles: string[];
+  languages: string[];
+  score: number;
+  price_from: number | null;
+  verified: boolean;
+};
+
+export type VoteTarget = "planner" | "venue" | "vendor";
+export type VoteCount = { target_type: VoteTarget; target_id: string; up: number; down: number };
+
+export type Review = {
+  id: string;
+  user_id: string;
+  target_type: VoteTarget;
+  target_id: string;
+  rating: number;
+  body: string;
+  author_name: string | null;
+  created_at: string;
+};
+
+export type SavedPlan = {
+  id: string;
+  user_id: string;
+  title: string | null;
+  guests: number;
+  estimate: number;
+  state: unknown;
+  breakdown: Array<{ group: string; label: string; amount: number; share: number }>;
+  created_at: string;
+  updated_at: string;
+};
+
+export type MonthData = {
+  month: number;
+  name: string;
+  temp_high: number;
+  temp_low: number;
+  rain_days: number;
+  price_index: number;
+  availability: "high" | "medium" | "low";
+  score: number;
+  verdict: string;
+  note: string;
 };
 
 export type RealWedding = {
@@ -126,4 +230,6 @@ export type PricingConfig = {
   categories: ServiceCategory[];
   tiers: ServiceTier[];
   realWeddings: RealWedding[];
+  /** Best vendor per budget group, revealed to signed-in users. */
+  matched: Record<string, { name: string; score: number; category: string }>;
 };

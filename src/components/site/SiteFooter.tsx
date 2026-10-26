@@ -1,39 +1,55 @@
-import Link from "next/link";
+"use client";
+
+import { LocaleLink } from "@/i18n/LocaleLink";
+import { useI18n } from "@/i18n/LocaleProvider";
 
 export function SiteFooter() {
+  const { dict } = useI18n();
   return (
-    <footer className="mt-24 border-t border-sand-deep bg-sand">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
+    <footer className="mt-24 bg-ink text-cream">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <p className="font-display text-xl font-semibold text-ink">Wedding Planner Marrakech</p>
-          <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
-            An editorial planning platform for Marrakech weddings. Real budgets, every planner we
-            have written about, and no commission from anyone.
-          </p>
+          <p className="font-display text-2xl font-medium">Wedding Planner Marrakesh</p>
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/55">{dict.footer.blurb}</p>
+          <p className="mt-5 text-[11px] uppercase tracking-[0.18em] text-saffron">{dict.footer.marrakech}</p>
         </div>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-teal">Explore</p>
-          <ul className="mt-3 space-y-2 text-sm text-ink-soft">
-            <li><Link href="/#simulator" className="hover:text-teal">Budget simulator</Link></li>
-            <li><Link href="/planners" className="hover:text-teal">Wedding planners</Link></li>
-            <li><Link href="/guides" className="hover:text-teal">Guides</Link></li>
-            <li><Link href="/#faq" className="hover:text-teal">FAQ</Link></li>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40">{dict.nav.explore}</p>
+          <ul className="mt-4 space-y-2 text-sm text-white/70">
+            <li><LocaleLink href="/#simulator" className="hover:text-white">{dict.nav.simulator}</LocaleLink></li>
+            <li><LocaleLink href="/map" className="hover:text-white">{dict.nav.map}</LocaleLink></li>
+            <li><LocaleLink href="/venues" className="hover:text-white">{dict.nav.venues}</LocaleLink></li>
+            <li><LocaleLink href="/planners" className="hover:text-white">{dict.nav.planners}</LocaleLink></li>
+            <li><LocaleLink href="/vendors" className="hover:text-white">{dict.nav.vendors}</LocaleLink></li>
+            <li><LocaleLink href="/wedding-date-optimizer" className="hover:text-white">{dict.nav.seasonPicker}</LocaleLink></li>
+            <li><LocaleLink href="/checklist" className="hover:text-white">{dict.nav.checklist}</LocaleLink></li>
+            <li><LocaleLink href="/timeline" className="hover:text-white">{dict.nav.timeline}</LocaleLink></li>
+            <li><LocaleLink href="/guides" className="hover:text-white">{dict.nav.guides}</LocaleLink></li>
           </ul>
         </div>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-teal">Guides</p>
-          <ul className="mt-3 space-y-2 text-sm text-ink-soft">
-            <li><Link href="/guides/complete-guide" className="hover:text-teal">The complete guide</Link></li>
-            <li><Link href="/guides/legal-requirements" className="hover:text-teal">Legal requirements</Link></li>
-            <li><Link href="/guides/best-seasons" className="hover:text-teal">Best seasons</Link></li>
-            <li><Link href="/guides/wedding-zones" className="hover:text-teal">Wedding zones</Link></li>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40">{dict.footer.guides}</p>
+          <ul className="mt-4 space-y-2 text-sm text-white/70">
+            <li><LocaleLink href="/guides/complete-guide" className="hover:text-white">{dict.footer.completeGuide}</LocaleLink></li>
+            <li><LocaleLink href="/legal" className="hover:text-white">{dict.footer.legalReq}</LocaleLink></li>
+            <li><LocaleLink href="/guides/best-seasons" className="hover:text-white">{dict.footer.bestSeasons}</LocaleLink></li>
+            <li><LocaleLink href="/guides/wedding-zones" className="hover:text-white">{dict.footer.zones}</LocaleLink></li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-sand-deep/70">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Wedding Planner Marrakech. Editorial, independent, commission-free.</p>
-          <p>Estimates are indicative. Final quotes come from your planner and vendors.</p>
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 text-[11px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            {dict.footer.rights} ·{" "}
+            <LocaleLink href="/privacy" className="hover:text-white">{dict.footer.privacy}</LocaleLink>
+            {" · "}
+            <LocaleLink href="/terms" className="hover:text-white">{dict.footer.terms}</LocaleLink>
+            {" · "}
+            <LocaleLink href="/contact" className="hover:text-white">{dict.footer.contact}</LocaleLink>
+            {" · "}
+            <LocaleLink href="/our-services" className="hover:text-white">{dict.nav.about}</LocaleLink>
+          </p>
+          <p>{dict.footer.estimates}</p>
         </div>
       </div>
     </footer>

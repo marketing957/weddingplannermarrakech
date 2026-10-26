@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>palm-and-petal</title>
+  <rect width="64" height="64" fill="#3D2914"/>
+  <g><path d="M32 52 V28" stroke="#F3E6C8" stroke-width="3" stroke-linecap="round"/>
+     <path d="M32 28 C18 18 14 28 22 30 C16 22 28 14 32 24 C36 14 48 22 42 30 C50 28 46 18 32 28 Z" fill="#C4A35A"/></g>
+</svg>

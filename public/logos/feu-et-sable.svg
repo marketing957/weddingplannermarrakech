@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>feu-et-sable</title>
+  <rect width="64" height="64" fill="#5C1A1A"/><rect x="4" y="4" width="56" height="56" fill="none" stroke="#D4A574" stroke-width="1.5"/>
+  <g><path d="M32 50 C18 38 22 24 32 14 C42 24 46 38 32 50 Z" fill="#D4A574"/>
+     <path d="M32 46 C24 38 28 28 32 22 C36 28 40 38 32 46 Z" fill="#F7F4EF" opacity=".45"/></g>
+</svg>

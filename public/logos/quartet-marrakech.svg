@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>quartet-marrakech</title>
+  <rect width="64" height="64" fill="#EDE4D4" rx="12"/>
+  <g><ellipse cx="24" cy="42" rx="8" ry="6" fill="#2C3A34"/>
+     <ellipse cx="42" cy="38" rx="8" ry="6" fill="#2C3A34"/>
+     <path d="M32 42 V16 H50 V38" fill="none" stroke="#8B5E3C" stroke-width="3"/></g>
+</svg>

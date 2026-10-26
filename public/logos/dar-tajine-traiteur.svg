@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>dar-tajine-traiteur</title>
+  <rect width="64" height="64" fill="#F7F4EF"/><rect x="4" y="4" width="56" height="56" fill="none" stroke="#B08948" stroke-width="1.5"/>
+  <g><path d="M16 50 V30 A16 16 0 0 1 48 30 V50 H40 V32 A8 8 0 0 0 24 32 V50 Z" fill="#161411"/>
+     <rect x="28" y="40" width="8" height="10" fill="#B08948"/></g>
+</svg>
