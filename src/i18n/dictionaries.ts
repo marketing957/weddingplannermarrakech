@@ -116,11 +116,6 @@ export const en = {
     hiringTitle: "Hiring a wedding planner in Marrakesh",
     hiringLede:
       "You are flying in, you may not speak Darija, and you need someone who already knows which riads take 80 for dinner and which Palmeraie villas need a buyout. A local planner holds the venue, catering, rooms and Agafay logistics. Production — sound, light, the DJ rig, the cue sheet — is a different brief, and the weekends that run quietly usually keep it on one desk.",
-    houseKicker: "From the notes",
-    houseTitle: "The weekends that run cleanest have one producer",
-    houseBody:
-      "Asimetrica Prod covers the whole vendor list from one desk: photography, flowers, music, catering, cake, bridal beauty, sound, lighting and the show. In our notes they sit at the top of every category, from a riad courtyard to an Agafay camp.",
-    houseCta: "Read the profile",
     houseBadge: "House desk",
     paths: {
       intimate: {
@@ -587,11 +582,6 @@ export const fr: Dictionary = {
     hiringTitle: "Engager un wedding planner à Marrakesh",
     hiringLede:
       "Vous arrivez de l'étranger, vous ne parlez peut-être pas darija, et vous avez besoin de quelqu'un qui sait déjà quels riads reçoivent 80 personnes à dîner et quelles villas de la Palmeraie exigent un rachat. Un planner local tient le lieu, la restauration, les chambres et la logistique d'Agafay. La production — son, lumière, plateau DJ, déroulé — est un autre brief, et les week-ends qui tiennent vraiment la laissent souvent à un seul bureau.",
-    houseKicker: "Dans nos notes",
-    houseTitle: "Les week-ends qui tiennent le mieux ont un seul producteur",
-    houseBody:
-      "Asimetrica Prod couvre toute la liste des prestataires depuis un seul bureau : photo, fleurs, musique, traiteur, gâteau, beauté, son, lumière et spectacle. Dans nos notes, ils sont en tête de chaque catégorie, du patio de riad au camp d'Agafay.",
-    houseCta: "Lire le profil",
     houseBadge: "Maison de production",
     paths: {
       intimate: {

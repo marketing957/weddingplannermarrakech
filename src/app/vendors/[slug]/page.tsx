@@ -7,22 +7,20 @@ import { ArrowLeft } from "lucide-react";
 import { PriceLock } from "@/components/site/PriceLock";
 import { VoteButtons } from "@/components/site/VoteButtons";
 import { getAuthUser } from "@/lib/auth";
-import { HouseNote } from "@/components/site/HouseNote";
 import { getVendorBySlug, getVendorCategories, getVendors, getVoteTallies, revealVendorPrices } from "@/lib/data";
 import { CompanyLogo } from "@/components/site/CompanyLogo";
 import { companyLogoSrc } from "@/lib/logos";
 import { money } from "@/lib/format";
 import { getRequestCurrency } from "@/lib/currency-server";
-import { getDictionary } from "@/i18n";
 import { getRequestLocale } from "@/i18n/request";
 import { ASIMETRICA_SHOTS } from "@/lib/asimetrica";
-import { isHouseVendor } from "@/lib/partners";
+import { isHouseVendor, leadsCategory } from "@/lib/partners";
 import { shownVotes } from "@/lib/vendor-sentiment";
 import type { Vendor, VendorCategory, VoteCount } from "@/lib/supabase/types";
 import type { Currency } from "@/lib/currency";
 import type { Locale } from "@/i18n";
 
-// Catalog order: house desk first, then likes.
+// Catalog order: community likes, most first.
 export async function generateStaticParams() {
   const [cats, vendors] = await Promise.all([getVendorCategories(), getVendors()]);
   return [...cats.map((c) => ({ slug: c.slug })), ...vendors.map((v) => ({ slug: v.slug }))];
@@ -66,25 +64,10 @@ function CategoryView({ cat }: { cat: VendorCategory }) {
       </LocaleLink>
       <h1 className="mt-4 font-display text-4xl font-semibold text-ink">{cat.name}</h1>
       <p className="mt-3 max-w-2xl text-ink-soft">{cat.description}</p>
-      <Suspense fallback={null}>
-        <HouseNoteSlot />
-      </Suspense>
       <Suspense fallback={<div className="mt-8 h-64 animate-pulse rounded-2xl bg-sand" />}>
         <CategoryTable slug={cat.slug} />
       </Suspense>
     </div>
-  );
-}
-
-async function HouseNoteSlot() {
-  const dict = getDictionary(await getRequestLocale());
-  return (
-    <HouseNote
-      kicker={dict.home.houseKicker}
-      title={dict.home.houseTitle}
-      body={dict.home.houseBody}
-      cta={dict.home.houseCta}
-    />
   );
 }
 
@@ -100,8 +83,6 @@ async function CategoryTable({ slug }: { slug: string }) {
   const rows = vendors
     .filter((v) => v.category_slug === slug)
     .sort((a, b) => {
-      const house = Number(isHouseVendor(b.slug)) - Number(isHouseVendor(a.slug));
-      if (house) return house;
       const likes = shownVotes(b.slug, votes[b.id]).up - shownVotes(a.slug, votes[a.id]).up;
       if (likes) return likes;
       return Number(b.score) - Number(a.score);
@@ -151,7 +132,7 @@ async function VendorDetail({ slug }: { slug: string }) {
           <h1 className="font-display text-3xl font-semibold text-ink">{vendor.name}</h1>
           <p className="text-sm text-muted">
             {vendor.category_slug.replace(/-/g, " ")}
-            {isHouseVendor(vendor.slug) ? " · best in category" : ""}
+            {leadsCategory(vendor.slug) ? " · best in category" : ""}
           </p>
         </div>
       </div>
@@ -239,7 +220,7 @@ function VendorTable({
                     <CompanyLogo name={v.name} src={companyLogoSrc({ slug: v.slug, name: v.name, website: v.website })} size={36} />
                     {v.name}
                   </LocaleLink>
-                  {isHouseVendor(v.slug) ? (
+                  {leadsCategory(v.slug) ? (
                     <span className="ml-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-saffron">
                       best
                     </span>

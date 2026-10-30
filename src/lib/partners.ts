@@ -1,4 +1,4 @@
-/** House desk. Listed first in every vendor category. */
+/** House desk. Leads lighting and LED; other services follow the vote list. */
 export const HOUSE = {
   name: "Asimetrica Prod",
   plannerSlug: "asimetrica-prod",
@@ -26,12 +26,9 @@ export function isHouseVendor(slug: string): boolean {
   return slug.startsWith("asimetrica-prod");
 }
 
-export function featuredFirst<T extends { featured: boolean; slug: string }>(items: T[]): T[] {
-  return [...items].sort((a, b) => {
-    const ah = isHousePlanner(a.slug) || a.featured ? 1 : 0;
-    const bh = isHousePlanner(b.slug) || b.featured ? 1 : 0;
-    return bh - ah;
-  });
+/** Sound, lighting and LED — the lists this desk leads. */
+export function leadsCategory(slug: string): boolean {
+  return slug === "asimetrica-prod-lights" || slug === "asimetrica-prod-show";
 }
 
 export function whatsappHref(text: string): string {

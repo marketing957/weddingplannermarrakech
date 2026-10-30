@@ -164,8 +164,6 @@ async function PlannerRank({ slug }: { slug: string }) {
     getAuthUser(),
   ]);
   const ranked = [...planners].sort((a, b) => {
-    const house = Number(isHousePlanner(b.slug)) - Number(isHousePlanner(a.slug));
-    if (house) return house;
     const likes = shownVotes(b.slug, votes[b.id]).up - shownVotes(a.slug, votes[a.id]).up;
     if (likes) return likes;
     return a.name.localeCompare(b.name);
@@ -178,7 +176,6 @@ async function PlannerRank({ slug }: { slug: string }) {
     <div className="mt-4 flex flex-wrap items-center gap-4">
       <p className="text-sm font-semibold uppercase tracking-[0.14em] text-saffron">
         Rank {String(index + 1).padStart(2, "0")}
-        {isHousePlanner(planner.slug) ? " · best" : ""}
       </p>
       <VoteButtons
         targetType="planner"

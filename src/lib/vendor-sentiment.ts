@@ -1,6 +1,6 @@
 /** Display baselines for likes and dislikes. Real account votes are added on top. */
 const SEEDED: Record<string, { up: number; down: number }> = {
-  "asimetrica-prod": { up: 312, down: 4 },
+  "asimetrica-prod": { up: 158, down: 9 },
 
   "studio-maev": { up: 186, down: 12 },
   "the-souk-department": { up: 174, down: 11 },
@@ -15,14 +15,14 @@ const SEEDED: Record<string, { up: number; down: number }> = {
   "exceptional-moment": { up: 76, down: 10 },
   "zinevent-marrakech": { up: 64, down: 12 },
 
-  "asimetrica-prod-photo": { up: 248, down: 4 },
-  "asimetrica-prod-flowers": { up: 231, down: 3 },
-  "asimetrica-prod-dj": { up: 226, down: 2 },
-  "asimetrica-prod-catering": { up: 219, down: 5 },
-  "asimetrica-prod-cake": { up: 204, down: 2 },
-  "asimetrica-prod-beauty": { up: 211, down: 3 },
-  "asimetrica-prod-lights": { up: 238, down: 2 },
-  "asimetrica-prod-show": { up: 222, down: 4 },
+  "asimetrica-prod-photo": { up: 134, down: 8 },
+  "asimetrica-prod-flowers": { up: 72, down: 11 },
+  "asimetrica-prod-dj": { up: 59, down: 12 },
+  "asimetrica-prod-catering": { up: 124, down: 8 },
+  "asimetrica-prod-cake": { up: 68, down: 10 },
+  "asimetrica-prod-beauty": { up: 96, down: 9 },
+  "asimetrica-prod-lights": { up: 186, down: 3 },
+  "asimetrica-prod-show": { up: 168, down: 4 },
 
   "atlas-lens-studio": { up: 162, down: 11 },
   "noor-frames": { up: 141, down: 14 },

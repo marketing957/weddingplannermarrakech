@@ -1,5 +1,5 @@
 import { getFaqs, getMonths, getPlanners, getVendors, getVenues } from "@/lib/data";
-import { featuredFirst, isHouseVendor } from "@/lib/partners";
+import { shownVotes } from "@/lib/vendor-sentiment";
 import type { CatalogBrief } from "./types";
 
 export async function loadCatalogBrief(): Promise<CatalogBrief> {
@@ -21,7 +21,8 @@ export async function loadCatalogBrief(): Promise<CatalogBrief> {
             `${v.name} | ${v.zone} | ${v.tier} | ${v.capacity_seated} seated | ${v.styles.slice(0, 3).join("/")} | /venues/${v.slug}`,
         )
         .join("\n"),
-      planners: featuredFirst(planners)
+      planners: [...planners]
+        .sort((a, b) => shownVotes(b.slug).up - shownVotes(a.slug).up || a.name.localeCompare(b.name))
         .slice(0, 20)
         .map(
           (p) =>
@@ -29,7 +30,7 @@ export async function loadCatalogBrief(): Promise<CatalogBrief> {
         )
         .join("\n"),
       vendors: [...vendors]
-        .sort((a, b) => Number(isHouseVendor(b.slug)) - Number(isHouseVendor(a.slug)))
+        .sort((a, b) => shownVotes(b.slug).up - shownVotes(a.slug).up || a.name.localeCompare(b.name))
         .slice(0, 24)
         .map((v) => `${v.name} | ${v.category_slug.replace(/-/g, " ")} | /vendors/${v.slug}`)
         .join("\n"),

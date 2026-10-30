@@ -1,14 +1,30 @@
 import Image from "next/image";
 import { LocaleLink } from "@/i18n/LocaleLink";
 import { CompanyLogo } from "@/components/site/CompanyLogo";
-import { getVendorCategories, getVendors } from "@/lib/data";
+import { getVendorCategories, getVendors, getVoteTallies } from "@/lib/data";
 import { ASIMETRICA_SERVICES, ASIMETRICA_SHOTS } from "@/lib/asimetrica";
 import { companyLogoSrc } from "@/lib/logos";
-import { HOUSE, isHouseVendor } from "@/lib/partners";
+import { HOUSE, isHouseVendor, leadsCategory } from "@/lib/partners";
+import { shownVotes } from "@/lib/vendor-sentiment";
 
 export async function AsimetricaDossier() {
-  const [vendors, categories] = await Promise.all([getVendors(), getVendorCategories()]);
+  const [vendors, categories, votes] = await Promise.all([
+    getVendors(),
+    getVendorCategories(),
+    getVoteTallies("vendor"),
+  ]);
   const bySlug = new Map(vendors.map((v) => [v.slug, v]));
+  const rankIn = (categorySlug: string, vendorSlug: string) => {
+    const rows = vendors
+      .filter((v) => v.category_slug === categorySlug)
+      .sort((a, b) => {
+        const likes = shownVotes(b.slug, votes[b.id]).up - shownVotes(a.slug, votes[a.id]).up;
+        if (likes) return likes;
+        return Number(b.score) - Number(a.score);
+      });
+    const index = rows.findIndex((v) => v.slug === vendorSlug);
+    return index < 0 ? null : index + 1;
+  };
 
   return (
     <div className="mt-10 space-y-14">
@@ -64,6 +80,7 @@ export async function AsimetricaDossier() {
         <ul className="mt-6 grid gap-4 sm:grid-cols-2">
           {ASIMETRICA_SERVICES.map((service) => {
             const vendor = bySlug.get(service.slug);
+            const rank = vendor ? rankIn(vendor.category_slug, vendor.slug) : null;
             return (
               <li key={service.slug} className="border border-sand-deep bg-white p-5">
                 <LocaleLink href={`/vendors/${service.slug}`} className="font-display text-xl font-medium text-ink hover:text-saffron">
@@ -72,7 +89,9 @@ export async function AsimetricaDossier() {
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{service.detail}</p>
                 {vendor ? (
                   <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-teal">
-                    Score {Number(vendor.score).toFixed(1)} · best in {vendor.category_slug.replace(/-/g, " ")}
+                    Score {Number(vendor.score).toFixed(1)}
+                    {rank != null ? ` · rank ${String(rank).padStart(2, "0")}` : ""}
+                    {leadsCategory(vendor.slug) ? " · best in category" : ""}
                   </p>
                 ) : null}
               </li>

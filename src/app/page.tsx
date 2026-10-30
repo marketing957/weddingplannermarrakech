@@ -5,9 +5,8 @@ import { BudgetSimulator } from "@/components/simulator/BudgetSimulator";
 import { Accordion } from "@/components/site/Accordion";
 import { JsonLd } from "@/components/site/JsonLd";
 import { PlannerRow } from "@/components/site/PlannerCard";
-import { HouseNote } from "@/components/site/HouseNote";
-import { getFaqs, getMonths, getPlanners, getPricingConfig, getVendors, getVenues } from "@/lib/data";
-import { featuredFirst } from "@/lib/partners";
+import { getFaqs, getMonths, getPlanners, getPricingConfig, getVendors, getVenues, getVoteTallies } from "@/lib/data";
+import { shownVotes } from "@/lib/vendor-sentiment";
 import { faqLd, pageAlternates } from "@/lib/seo";
 import { pinForVenue } from "@/lib/geo";
 import { mapPhotoFields } from "@/lib/photos";
@@ -81,12 +80,6 @@ async function HomeBody() {
         <Suspense fallback={<ListSkeleton rows={5} />}>
           <PlannersPreview />
         </Suspense>
-        <HouseNote
-          kicker={dict.home.houseKicker}
-          title={dict.home.houseTitle}
-          body={dict.home.houseBody}
-          cta={dict.home.houseCta}
-        />
       </section>
 
       <section className="mx-auto max-w-6xl px-5 pt-24">
@@ -181,9 +174,15 @@ async function ToolsLoader() {
 }
 
 async function PlannersPreview() {
-  const [planners, locale] = await Promise.all([getPlanners(), getRequestLocale()]);
+  const [planners, votes, locale] = await Promise.all([getPlanners(), getVoteTallies("planner"), getRequestLocale()]);
   const dict = getDictionary(locale);
-  const preview = featuredFirst(planners).slice(0, 6);
+  const preview = [...planners]
+    .sort((a, b) => {
+      const likes = shownVotes(b.slug, votes[b.id]).up - shownVotes(a.slug, votes[a.id]).up;
+      if (likes) return likes;
+      return a.name.localeCompare(b.name);
+    })
+    .slice(0, 6);
   return (
     <div className="mt-8">
       {preview.map((p) => (

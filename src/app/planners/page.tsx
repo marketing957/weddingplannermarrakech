@@ -5,15 +5,12 @@ import { PriceLock } from "@/components/site/PriceLock";
 import { VoteButtons } from "@/components/site/VoteButtons";
 import { Accordion } from "@/components/site/Accordion";
 import { getAuthUser } from "@/lib/auth";
-import { HouseNote } from "@/components/site/HouseNote";
 import { getFaqs, getPlanners, getVoteTallies, revealPlannerPrices } from "@/lib/data";
 import { CompanyLogo } from "@/components/site/CompanyLogo";
 import { companyLogoSrc } from "@/lib/logos";
 import { money } from "@/lib/format";
 import { getRequestCurrency } from "@/lib/currency-server";
-import { getDictionary } from "@/i18n";
 import { getRequestLocale } from "@/i18n/request";
-import { isHousePlanner } from "@/lib/partners";
 import { shownVotes } from "@/lib/vendor-sentiment";
 
 export const metadata: Metadata = {
@@ -33,9 +30,6 @@ export default function PlannersPage() {
       <p className="mt-3 text-ink-soft">
         Ordered by community votes · one vote per account · no paid placement
       </p>
-      <Suspense fallback={null}>
-        <HouseNoteSlot />
-      </Suspense>
       <Suspense fallback={<div className="mt-10 h-96 animate-pulse bg-sand" />}>
         <PlannersTable />
       </Suspense>
@@ -56,18 +50,6 @@ export default function PlannersPage() {
   );
 }
 
-async function HouseNoteSlot() {
-  const dict = getDictionary(await getRequestLocale());
-  return (
-    <HouseNote
-      kicker={dict.home.houseKicker}
-      title={dict.home.houseTitle}
-      body={dict.home.houseBody}
-      cta={dict.home.houseCta}
-    />
-  );
-}
-
 async function PlannerFaqs() {
   const items = await getFaqs("planner_guide");
   return <Accordion items={items.slice(0, 4)} />;
@@ -84,8 +66,6 @@ async function PlannersTable() {
   const signedIn = !!user;
   const planners = signedIn ? await revealPlannerPrices(plannersRaw) : plannersRaw;
   const ranked = [...planners].sort((a, b) => {
-    const house = Number(isHousePlanner(b.slug)) - Number(isHousePlanner(a.slug));
-    if (house) return house;
     const likes = shownVotes(b.slug, votes[b.id]).up - shownVotes(a.slug, votes[a.id]).up;
     if (likes) return likes;
     return a.name.localeCompare(b.name);
@@ -126,9 +106,6 @@ async function PlannersTable() {
                     <span>
                       <span className="block font-semibold text-ink hover:text-saffron">{p.name}</span>
                       <span className="block text-xs text-muted">
-                        {isHousePlanner(p.slug) ? (
-                          <span className="mr-2 font-semibold uppercase tracking-[0.12em] text-saffron">best</span>
-                        ) : null}
                         {p.languages.join(" · ")}
                       </span>
                     </span>

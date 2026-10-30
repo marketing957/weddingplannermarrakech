@@ -24,7 +24,7 @@ Ask for a site visit early. A courtyard, a garden and a desert camp are three di
   'One desk for photography, flowers, music, catering, cake, beauty, sound, light and the show — useful when the venue is a riad courtyard or an Agafay camp rather than a hotel ballroom.',
   'Used to destination weekends: English, French and Spanish, and a team that stays on every supplier brief until last dance.',
   'Couples who want every wedding service from one house instead of a chain of suppliers.',
-  'When the brief is the whole weekend, this is the house at the top of every vendor category.'
+  'Lighting and LED are the lists they lead. The other wedding services sit in the same vote order as every other company.'
 )
 on conflict (slug) do update set
   name = excluded.name,
