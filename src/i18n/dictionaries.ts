@@ -57,7 +57,7 @@ export const en = {
   whatsapp: { label: "Chat with us", title: "Chat with Wissal on WhatsApp" },
   assistant: {
     title: "Atelier assistant",
-    kicker: "Ask Wissal",
+    kicker: "Ask Fatima",
     placeholder: "Ask about budget, season, venues…",
     send: "Send",
     open: "Open wedding assistant",
@@ -523,7 +523,7 @@ export const fr: Dictionary = {
   whatsapp: { label: "Discuter avec nous", title: "Discuter avec Wissal sur WhatsApp" },
   assistant: {
     title: "Assistant atelier",
-    kicker: "Demander à Wissal",
+    kicker: "Demander à Fatima",
     placeholder: "Budget, saison, lieux…",
     send: "Envoyer",
     open: "Ouvrir l’assistant mariage",

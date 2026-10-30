@@ -111,8 +111,8 @@ export function groundedReply(
 
   if (wantsHello && toks.length < 4) {
     return fr
-      ? "Bonjour — je suis l’assistant de l’atelier Wedding Planner Marrakesh. Je peux estimer un budget, choisir une saison, comparer riad et villa, ou vous orienter vers un planner. Par où commence-t-on ?"
-      : "Hello — I am the Wedding Planner Marrakesh atelier assistant. I can sketch a budget, pick a season, compare a riad with a villa, or point you to a planner. Where shall we start?";
+      ? "Bonjour — je suis Fatima, l’assistante de l’atelier Wedding Planner Marrakesh. Je peux estimer un budget, choisir une saison, comparer riad et villa, ou vous orienter vers un planner. Par où commence-t-on ?"
+      : "Hello — I am Fatima, the Wedding Planner Marrakesh atelier assistant. I can sketch a budget, pick a season, compare a riad with a villa, or point you to a planner. Where shall we start?";
   }
 
   if (faqs.length) {
